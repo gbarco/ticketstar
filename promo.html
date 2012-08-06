@@ -18,29 +18,27 @@
     
     <section class="wrap_up">
     	<div class="promo_wrap">
-        <img src="img/promo.jpg" alt="cupon">
+        <img id="promo-cupon" src="img/loading.gif" alt="cupon">
     	</div><!--fin promo-->
         
     	<div class="map">
-        	<img src="anunciantes/cys/map.jpg" alt="map">
+        	<img id="promo-map" src="img/loading.gif" alt="map">
     	</div><!--fin map-->
     </section><!--fin wrap_up-->
     
     <section class="wrap_down">
     	<div class="conditions">
         <h1>Condiciones</h1><br>
-        <p>promoción valida hasta 31/3/2013 o hasta agotas stock, esta promoción podra ser modificada sin prebio aviso</p>
-        
-        
+        <div id="conditions_list"></div>
     	</div><!--fin conditions-->
     	
         <div class="contact">
-        <h1>contactos del anunciante</h1>
+        <h1>contactos de <span id="contact-name">...</span></h1>
         
         <div class="redes_clientes">
-			<a class="facebook" title="facebook" href=""><span>f</span></a>
-			<a class="twit"  title="twitter" href=""><span>t</span></a>
-		</div>
+					<a id="contact-facebook" class="facebook" title="facebook" href=""><span>f</span></a>
+					<a id="contact-twitter" class="twit"  title="twitter" href=""><span>t</span></a>
+				</div>
         
     	</div><!--fin contact-->
     </section><!--fin Weap_down-->
@@ -54,11 +52,87 @@
 <script type='text/javascript' src='scripts/camera.min.js'></script>
 
 <script>
-	$(function(){
-		$('#camera_wrap_1').camera({
-			thumbnails: true
-		});
+
+	$(function() {
+		function __hash_changed() {
+			var hash = window.location.hash.substring(1);
+			var path = hash.split('/');
+
+			var cat = '';
+			var promo = '';
+
+			if (path.length == 2) {
+				/* cat + promo */
+				cat = path[0];
+				promo = path[1];
+			} else {
+				if (path.length == 1) {
+					cat = 'index';
+					promo = path[0];
+				} else {
+					console.log('no promo selected');
+					return;
+				}
+			}
+
+			/* promo */
+			var promo_base = "promos/" + cat + "/" + promo;
+			$("#promo-cupon").attr("src", promo_base + "/promo.jpg");
+
+			$.ajax({
+				url: promo_base + "/datos.json",
+				dataType: 'text json',
+				success: function(promo) {
+					var advertiser = promo.anunciante;
+					var advertiser_base = "anunciantes/" + advertiser;
+					/* mapa */
+					$("#promo-map").attr("src", advertiser_base + "/map.jpg");
+					/* condiciones */
+					var list = document.createElement('ul');
+					for(var i in promo.condiciones) {
+						var list_item = document.createElement('li');
+						list_item.innerHTML = promo.condiciones[i];
+						list.appendChild(list_item);
+					}
+					$("#conditions_list").replaceWith(list);
+
+					/* informacion del anunciante */
+					$.ajax({
+						url: advertiser_base + "/datos.json",
+						dataType: 'text json',
+						success: function(advertiser) {
+							$("#contact-name").text(advertiser.nombre);
+							if (advertiser.twitter) {
+								$("#contact-twitter").attr("href", advertiser.twitter).show();
+							} else {
+								$("#contact-twitter").hide();
+							}
+							if (advertiser.facebook) {
+								$("#contact-facebook").attr("href", advertiser.facebook).show();
+							} else {
+								$("#contact-facebook").hide();
+							}
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							console.log(textStatus);
+						}
+					});
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					console.log(textStatus);
+				}
+			});
+
+		}
+
+		$(window).bind('hashchange', __hash_changed);
+
+		if (window.location.hash) {
+			__hash_changed();
+		}
+
 	});
+
 </script>
 
 </body>
