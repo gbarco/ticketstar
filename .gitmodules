@@ -1,0 +1,3 @@
+[submodule "trimurti"]
+	path = trimurti
+	url = git@github.com:gbarco/Trimurti.git
