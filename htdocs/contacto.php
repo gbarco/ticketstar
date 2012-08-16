@@ -20,7 +20,7 @@
     	<!--headertop-->
 	</header>
     <div class="main-wrap">
-	<form action="contacto.php" method="post">
+	<form action="confirmar_contacto.php" method="post">
 
 		<h1>CONSULTAS</h1>
 
@@ -36,14 +36,26 @@
 			<input type="text" name="phone" value=""  />
 
 		</fieldset><!--mensaje-->
-	
+
 		<fieldset id="user-message">
 
 			<label for="message">Mensaje:</label>
 			<textarea name="message" rows="0" cols="0"></textarea>
 
+			<?php
+				require_once('lib/recaptchalib.php');
+				$publickey = "your_public_key"; // you got this from the signup page
+				echo recaptcha_get_html('6LfBlc4SAAAAAKOAYpweVXT_Sfsd1U4Z744IZe4k');
+			?>
+
 			<input type="submit" value="enviar" name="submit" class="submit" />
 
+			<div>
+				<?php
+					if ($status)
+						echo 'Muchas gracias por contacterse con nosostros.';
+				?>
+			</div>
 		</fieldset><!-- fin de mensaje -->
 
 	</form>
