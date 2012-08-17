@@ -41,26 +41,25 @@
 	}
 
 	// =========================================================================
-	$name    = $_POST['name'];
-	$email   = $_POST['email'];
-	$phone   = $_POST['phone'];
-	$message = $_POST['message'];
+	if (isset($_POST["submit"])) {
+		$name    = $_POST['name'];
+		$email   = $_POST['email'];
+		$phone   = $_POST['phone'];
+		$message = $_POST['message'];
 
-	// =========================================================================
-	$email_body = "Nombre: $name \n Email: $email \n Telefono: $phone \n Message: $message";
+		// =========================================================================
+		$email_body = "Nombre: $name \n Email: $email \n Telefono: $phone \n Message: $message";
 
-	// =========================================================================
-	$recaptcha_status = recaptcha_check_answer (
-		$config["recaptcha_private_key"],
-		$_SERVER["REMOTE_ADDR"],
-		$_POST["recaptcha_challenge_field"],
-		$_POST["recaptcha_response_field"]
-	);
+		// =========================================================================
+		$recaptcha_status = recaptcha_check_answer (
+			$config["recaptcha_private_key"],
+			$_SERVER["REMOTE_ADDR"],
+			$_POST["recaptcha_challenge_field"],
+			$_POST["recaptcha_response_field"]
+		);
 
-	$status = $recaptcha_status -> is_valid and validate_form and send_email($config, $email_body);
-
-	// =========================================================================
-	require 'contacto.php';
+		$status = $recaptcha_status -> is_valid and validate_form and send_email($config, $email_body);
+	}
 
 	// =========================================================================
 
