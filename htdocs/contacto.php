@@ -44,9 +44,7 @@
 
 			<?php
 				require_once('../lib/contactolib.php');
-				require_once('../lib/recaptchalib.php');
-				$publickey = "your_public_key"; // you got this from the signup page
-				echo recaptcha_get_html('6LfBlc4SAAAAAKOAYpweVXT_Sfsd1U4Z744IZe4k');
+				echo recaptcha_get_html($config["recaptcha_public_key"]);
 			?>
 
 			<input type="submit" value="enviar" name="submit" class="submit" />
