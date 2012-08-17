@@ -51,8 +51,13 @@
 
 			<div>
 				<?php
-					if ($status)
-						echo 'Muchas gracias por contacterse con nosostros.';
+					if (isset($status)) {
+						if ($status) {
+							echo 'Muchas gracias por contacterse con nosostros.';
+						} else {
+							echo 'Error en el formulario. Vuélvalo a intentar o intente ponerse en contacto por otro medio.';
+						}
+					}
 				?>
 			</div>
 		</fieldset><!-- fin de mensaje -->

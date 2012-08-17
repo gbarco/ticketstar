@@ -58,7 +58,7 @@
 			$_POST["recaptcha_response_field"]
 		);
 
-		$status = $recaptcha_status -> is_valid and validate_form and send_email($config, $email_body);
+		$status = $recaptcha_status -> is_valid and validate_form() and send_email($config, $email_body);
 	}
 
 	// =========================================================================
