@@ -43,7 +43,7 @@
 			<textarea name="message" rows="0" cols="0"></textarea>
 
 			<?php
-				require_once('lib/recaptchalib.php');
+				require_once('../lib/recaptchalib.php');
 				$publickey = "your_public_key"; // you got this from the signup page
 				echo recaptcha_get_html('6LfBlc4SAAAAAKOAYpweVXT_Sfsd1U4Z744IZe4k');
 			?>
