@@ -50,7 +50,7 @@ select, input, textarea {font: 99% sans-serif;}
 a:hover, a:active {outline: none;}
 small {font-size: 85%;}
 strong, th {font-weight: bold;}
-td, td img {vertical-align: top;} 
+td, td img {vertical-align: top;}
 
 sub, sup {font-size: 75%; line-height: 0; position: relative;}
 sup {top: -0.5em;}
@@ -75,7 +75,7 @@ a, img a, img, a img {border:0;	outline:0; text-decoration:none;}
 .fltright {float:right;}
 
 /* let's clear some floats */
-.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 .clear{ clear: both; }
 
@@ -110,10 +110,10 @@ border-bottom:2px solid #d50b07;
 .menu{
 height:63px;
 width:100%;
-padding-bottom: 2px; 
+padding-bottom: 2px;
 padding-top: 13px;
 }
-nav ul{    
+nav ul{
 	margin: 0 auto;
     width: 793px;
 	height:55px;
@@ -203,7 +203,7 @@ background:url(../img/solid.png) repeat;
 		background-image:url(../img/cys_gris.png);
 		margin-left: -15px;
 		margin-top:24px;
-	
+
 	}
 	.footer_ind_der a:hover{
 		background-image:url(../img/cys.png)}
@@ -211,7 +211,7 @@ background:url(../img/solid.png) repeat;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:12px;
 	font-weight:normal;
-	color:#333333;	
+	color:#333333;
 	text-shadow:0px 1px 1px #333333
 	 -webkit-transition: color 0.5s;
 	-moz-transition: color 0.5s;
@@ -221,13 +221,13 @@ background:url(../img/solid.png) repeat;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:12px;
 	font-weight:normal;
-	color:#333333;	
+	color:#333333;
 	text-shadow:0px 1px 1px #333333
 	 -webkit-transition: color 0.5s;
 	-moz-transition: color 0.5s;
 	-o-transition: color 0.5s;
 	}
-	.term_cond_leer {		
+	.term_cond_leer {
 		float:left;
 		padding-top:39px;
 		}
@@ -237,22 +237,22 @@ background:url(../img/solid.png) repeat;
 		height:50px;
 		width:50px;
 		}
-		
+
 	.term_cond_leer a:hover{
 		display:block;
 		background-image:url(../img/icono-leer.png)}
-		
-		.term_cond_desc {		
+
+		.term_cond_desc {
 		padding-left:60px;
     	padding-top:42px;
-		}		
+		}
 		.term_cond_desc a{
 		display:block;
 		background-image:url(../img/icono-descarga1.png);
 		height:50px;
 		width:50px;
 		}
-		
+
 	.term_cond_desc a:hover{
 		display:block;
 		background-image:url(../img/download.png)}
@@ -277,10 +277,10 @@ background:url(../img/solid.png) repeat;
 			width: 90%;
 		}
 		.camera_wrap camera_azure_skin em {font-size:18px}
-/*************************************/		
+/*************************************/
 .redes{
-height: 25px; 
-width: 75px; 
+height: 25px;
+width: 75px;
 top: 86px;
 position:relative;
 float:right;
@@ -294,7 +294,7 @@ float:right;
 	text-decoration:none;
 	color:#000000;
  }
- 
+
 .redes a:hover{
 color:#30487c;
 }
@@ -312,13 +312,13 @@ color:#86e1ff;
 	height:307px;
 	margin-top:3px;
 	width:100%;
-	
+
 	}
 .promos_inferiores{
 		height:241px;
 		width:100%;
 }
-.view{	
+.view{
     box-shadow: 1px 1px 2px #E6E6E6;
 	border-color:#8f8f92;
     cursor: default;
@@ -329,9 +329,9 @@ color:#86e1ff;
     position: relative;
     text-align: center;
     width: 204px;
-	
+
 }
-.view_inf{	
+.view_inf{
     box-shadow: 1px 1px 2px #E6E6E6;
 	border-color:#8f8f92;
     cursor: default;
@@ -342,8 +342,8 @@ color:#86e1ff;
     position: relative;
     text-align: center;
     width: 157px;
-	
-	
+
+
 }
 .view-sixth img {
    -webkit-transition: all 0.4s ease-in-out 0.5s;
@@ -391,7 +391,7 @@ font-size:16px !important;
 	color:#FFF;
 	font-weight:lighter;
 	position:relative;
-	
+
 }
 .view-sixth h2 {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -614,7 +614,7 @@ font-size:16px !important;
    transition-delay: 0.3s;
 }
 				/*******************/
-				
+
 .view .mask,.view .content {
    width:204px;
    height:290px;
@@ -622,7 +622,7 @@ font-size:16px !important;
    overflow:hidden;
    top: 0;
    left: 0;
-   
+
 }
 .view_inf .mask,.view_inf.content {
    width:157px;
@@ -648,7 +648,7 @@ font-size:16px !important;
 	color:#6CF
 	}
 
-/****************inicio_promo*******************/	
+/****************inicio_promo*******************/
 .wrap_up{
 	min-height:365px;
 	padding:20px 20px;
@@ -656,7 +656,7 @@ font-size:16px !important;
 }
 .promo_wrap {
 	float:left;
-	
+
 }
 .map{
 	float:right;
@@ -678,8 +678,8 @@ font-size:16px !important;
 	width:400px;
 }
 .redes_clientes{
-height: 30px; 
-width: 90px; 
+height: 30px;
+width: 90px;
 top: 20px;
 position:relative;
 float:left;
@@ -693,66 +693,66 @@ float:left;
 
 /****************fin_promo*******************/
 /*******************formulario de consulta*********/
-	
-	form h1 { 
-		color: #555; 
+
+	form h1 {
+		color: #555;
 		margin: 0 0 20px 0;
-		font-size: 20px; 
+		font-size: 20px;
 	}
 
-	label {	
+	label {
 		font-size: 20px;
-		color: #666; 
+		color: #666;
 	}
-	
-	form { 
-		
-		border: 1px solid #ddd; 
-		padding: 30px 40px 20px 40px; 
+
+	form {
+		border: 1px solid #ddd;
+		padding: 30px 40px 20px 40px;
 		margin: 75px auto;
 		width: 715px;
-		min-height:340px;
-		background: #fff;}
-		
-		fieldset { border: none; }
-	
-	#user-details { 
-		float: left;
-		width: 230px; 
+		min-height:436px;
+		background: #fff;
 	}
-	
-	#user-message { 
+
+		fieldset { border: none; }
+
+	#user-details {
+		float: left;
+		width: 230px;
+	}
+
+	#user-message {
 		float: right;
 		width: 405px;
 	}
-	
-	input, textarea { 		
-		padding: 8px; 
-		margin: 4px 0 20px 0; 
-		background: #fff; 
-		width: 220px; 
-		font-size: 14px; 
-		color: #555; 
+
+	input, textarea {
+		padding: 8px;
+		margin: 4px 0 20px 0;
+		background: #fff;
+		width: 220px;
+		font-size: 14px;
+		color: #555;
 		border: 1px #ddd solid;}
-		
-		textarea {		
-		width: 390px; 
-		height: 175px; 		 		
+
+		textarea {
+		width: 390px;
+		height: 150px;
 	}
-	
-	input:hover, textarea:hover { 
-		background: #eee; 
+
+	input:hover, textarea:hover {
+		background: #eee;
 	}
-		
-	input.submit { 	
-		width: 150px; 
-		color: #eee; 
-		text-transform: uppercase; 
+
+	input.submit {
+		width: 150px;
+		color: #eee;
+		text-transform: uppercase;
 		margin-top: 10px;
 		background-color: #F00;
 		border: none;}
-		
-		input.submit:hover { 		
-			cursor:  pointer; 
+
+		input.submit:hover {
+			cursor:  pointer;
 			background-color:#F56663;
-	} 		
+	}
