@@ -1,0 +1,20 @@
+#Vishnu configuration file
+<PROJECT>
+	NAME=www.ticketstar.com
+	GIT_TREEISH=release
+	BEFORE=
+	AFTER=.tell_people
+</PROJECT>
+<statics>
+	ORDER=1
+	FILES=HTML:htdocs/404.html
+	DESTINATION="../www.ticketstar.com/"
+</statics>
+<filters>
+	ORDER=2
+	FILES=HTML:htdocs/index.html
+	DESTINATION="../www.ticketstar.com/"
+</filters>
+<.tell_people>
+	ACTION="echo 'Built www.ticketstar.com' | mail gbarcouy@gmail.com"
+</.tell_people>
