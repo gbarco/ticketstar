@@ -7,12 +7,12 @@
 </PROJECT>
 <statics>
 	ORDER=1
-	FILES=HTML:htdocs/404.html
+	FILES=HTML:404.html
 	DESTINATION="../www.ticketstar.com/"
 </statics>
 <filters>
 	ORDER=2
-	FILES=HTML:htdocs/index.html
+	FILES=HTML:index.html
 	DESTINATION="../www.ticketstar.com/"
 </filters>
 <.tell_people>
